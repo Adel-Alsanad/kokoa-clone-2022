@@ -101,3 +101,21 @@
 .open-post__heart-count span {
   margin-left: 3px;
 }
+
+@keyframes heartBeat {
+  0% {
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(1.5);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.open-post__heart-count .fa-heart:hover {
+  will-change: transform;
+  animation: heartBeat 1s linear infinite;
+}
